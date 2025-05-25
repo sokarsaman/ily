@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Surprise Message</title>
+  <style>
+    body {
+      background: linear-gradient(to bottom right, #ffccf9, #ccf2ff);
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    .heart {
+      font-size: 80px;
+      color: #ff69b4;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .heart:hover {
+      transform: scale(1.2);
+    }
+
+    #loveMessage {
+      margin-top: 30px;
+      font-size: 2rem;
+      color: #ff1493;
+      display: none;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    /* Checkbox Trick */
+    #toggle {
+      display: none;
+    }
+
+    #toggle:checked + label + #loveMessage {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <input type="checkbox" id="toggle">
+    <label for="toggle" class="heart">❤️</label>
+    <div id="loveMessage">I love you 💖</div>
+  </div>
+</body>
+</html>
