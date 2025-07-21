@@ -10,4 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print message
-        run: echo "Hello my name is sokar, My Age is ${{ vars.Age }}"
+        run: echo "Hello my name is sokar, My Age is ${{vars.Age}}"
